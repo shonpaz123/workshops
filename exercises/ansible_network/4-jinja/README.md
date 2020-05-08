@@ -273,7 +273,7 @@ Add the following section into our `configure device with config` task in the `c
 
 #### Step 10 
 
-```[student1@ansible networking-workshop]$ ansible-playbook config.yaml``` 
+```bash[student1@ansible networking-workshop]$ ansible-playbook config.yaml``` 
 
 Have the handler been executed? why? 
 
