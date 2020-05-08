@@ -39,9 +39,9 @@ This will not require a username or password.
 Navigate to the `network-workshop` directory on the Ansible control node.  The word `ansible` indicates the hostname, and that you are on the correct host.
 
 ```
-[student1@ansible ~]$ cd ~/network-workshop/
-[student1@ansible network-workshop]$
-[student1@ansible network-workshop]$ pwd
+[student1@ansible ~]$ cd ~/networking-workshop/
+[student1@ansible networking-workshop]$
+[student1@ansible networking-workshop]$ pwd
 /home/student1/network-workshop
 ```
  - `~` - the tilde in this context is a shortcut for `/home/student1`
@@ -55,12 +55,13 @@ Run the `ansible` command with the `--version` command to look at what is config
 
 ```
 [student1@ansible ~]$ ansible --version
-ansible 2.8.1
-  config file = /home/student1/.ansible.cfg
-  configured module search path = [u'/home/student1/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+ansible 2.9.7
+  config file = /home/student2/.ansible.cfg
+  configured module search path = ['/home/student2/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
   executable location = /usr/bin/ansible
-  python version = 2.7.5 (default, Jun 11 2019, 12:19:05) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+  python version = 3.6.8 (default, Dec  5 2019, 15:45:45) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
+
 ```
 
 > Note: The ansible version you see might differ from the above output
@@ -80,10 +81,10 @@ timeout = 60
 deprecation_warnings = False
 host_key_checking = False
 retry_files_enabled = False
-inventory = /home/student1/lab_inventory/hosts
+inventory = /home/student2/lab_inventory/hosts
 [persistent_connection]
-connect_timeout = 60
-command_timeout = 60
+connect_timeout = 200
+command_timeout = 200
 ```
 
 Note the following parameters within the `ansible.cfg` file:
