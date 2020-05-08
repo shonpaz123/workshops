@@ -186,9 +186,9 @@ Add the following task into your `config.yaml` playbook, which will fetch the MA
       with_dict: "{{ ansible_net_interfaces }}"
 ```
 
-* `with_dict` is a way of iterating through a dictionary. In our facts, there is a variable called `ansible_net_interfaces` which contains a a list of each host's interfaces and their properties. 
-* we use the `debug` module in order to print those values into the screen, for every interface under `ansible_net_interfaces`, this task will fetch the MAC adress of that interface and the hostname.
-* `{{ item }}` is a way of using the item the loop/dict are iterating on (similar to foreach). the key in the dictionary is the interface name, where the value holds another dictionary with the interfaces properties.
+* **with_dict** is a way of iterating through a dictionary. In our facts, there is a variable called `ansible_net_interfaces` which contains a a list of each host's interfaces and their properties. 
+* we use the **debug** module in order to print those values into the screen, for every interface under `ansible_net_interfaces`, this task will fetch the MAC adress of that interface and the hostname.
+* **{{ item }}** is a way of using the item the loop/dict are iterating on (similar to foreach). the key in the dictionary is the interface name, where the value holds another dictionary with the interfaces properties.
 
 Save the `config.yaml` file, and run the `ansible rtr1 -m ios_facts -a 'gather_subset=interfaces'` to verify that you have understand the data structure of the `ansible_net_interfaces` dictionary. 
 
@@ -267,9 +267,9 @@ Add the following section into our `configure device with config` task in the `c
         command: write
 ```
 
-* `when` is used as a conditional saying that this task will run only when the `ansible_net_iostype` variable is equal to "IOS-XE". It means basically that for a device not running this ostype, will not get the configuration from the Jinja template. 
-* `notify` will throw a notification to a handler called `write ios device` that is decalred under the `handlers` section. It is basically a task that runs only when the previous task calls it, a `write` command will be passed into the router to save those configurations. 
-* The `write` command will be executed only if the state of the calling task has chaged. in our case, the task will only run if an "IOS-XE" device configuration has changed. 
+* **when** is used as a conditional saying that this task will run **only** when the `ansible_net_iostype` variable is equal to `IOS-XE`. It means basically that for a device not running this ostype, will not get the configuration from the Jinja template. 
+* **notify** will throw a notification to a handler called `write ios device` that is decalred under the `handlers` section. It is basically a task that runs only when the previous task calls it, a `write` command will be passed into the router to save those configurations. 
+* The **write** command will be executed **only** if the state of the calling task has chaged. in our case, the task will only run if an `IOS-XE` device configuration **has changed**. 
 
 #### Step 10 
 
