@@ -116,7 +116,7 @@ Finally:
 
 Create the Ansible Playbook config.yml:
 
-```
+```bash
 [student1@ansible networking-workshop]$ nano config.yml
 ```
 
@@ -144,7 +144,7 @@ Copy the following Ansible Playbook to the config.yml file:
 
 Execute the Ansible Playbook:
 
-```
+```bash
 [student1@ansible networking-workshop]$ ansible-playbook config.yml
 ```
 
