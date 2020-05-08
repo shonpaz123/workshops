@@ -1,4 +1,4 @@
-# Exercise 4 - Network Configuration with Jinja Templates
+# Exercise 4 - Network Configuration with Jinja Templates, Conditionals, Loops and Handlers
 
 ## Table of Contents
 
@@ -335,6 +335,9 @@ Loopback100            192.168.100.2   YES manual up                    up
 - The [Jinja2 template lookup plugin](https://docs.ansible.com/ansible/latest/plugins/lookup.html) can allow us to template out a device configuration.
 - The `*os_config` (e.g. ios_config) and cli_config modules can source a jinja2 template file, and push directly to a device.  If you want to just render a configuration locally on the control node, use the [template module](https://docs.ansible.com/ansible/latest/modules/template_module.html).
 - Variables are mostly commonly stored in group_vars and host_vars.  This short example only used group_vars.
+- Loops can be used to iterate through dictionaries and lists. 
+- Conditionals can be used to filter out specific cases in which a given task will run 
+- Handlers can be notified whenever it needs to run by another task.
 
 # Solution
 
