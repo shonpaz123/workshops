@@ -13,7 +13,7 @@ Want the Presentation Deck?  Its right here:
 - [Exercise 1 - Exploring the lab environment](./1-explore/)
 - [Exercise 2 - Execute your first network automation playbook](./2-first-playbook/)
 - [Exercise 3 - Use Ansible facts on network devices](./3-facts/)
-- [Exercise 4 - Use Jinja to template network configurations](./4-jinja/)
+- [Exercise 4 - Network Configuration with Jinja Templates, Conditionals, Loops and Handlers](./4-jinja/)
 - [Exercise 5 - Explore the Ansible Tower environment](./5-explore-tower/)
 - [Exercise 6 - Create an Ansible Tower job template](./6-tower-job-template/)
 - [Exercise 7 - Create an Ansible Tower Survey](./7-tower-survey/)
