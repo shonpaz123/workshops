@@ -190,7 +190,7 @@ Add the following task into your `config.yaml` playbook, which will fetch the MA
 * we use the `debug` module in order to print those values into the screen, for every interface under `ansible_net_interfaces`, this task will fetch the MAC adress of that interface and the hostname.
 * `{{ item }}` is a way of using the item the loop/dict are iterating on (similar to foreach). the key in the dictionary is the interface name, where the value holds another dictionary with the interfaces properties.
 
-Save the `config.yaml file, and run the `ansible rtr1 -m ios_facts -a 'gather_subset=interfaces'` to verify that you have understand the data structure of the `ansible_net_interfaces` dictionary. 
+Save the `config.yaml` file, and run the `ansible rtr1 -m ios_facts -a 'gather_subset=interfaces'` to verify that you have understand the data structure of the `ansible_net_interfaces` dictionary. 
 
 Execute the ansible playbook
 
@@ -202,7 +202,7 @@ does it work? why?
 
 After you have understood that you should have added the `ios_facts` module to the playbook, rerun the playbook to get the proper result: 
 
-``bash 
+```bash 
 ansible-playbook config.yml 
 
 PLAY [configure network devices] *************************************************************************************************************************************************************
