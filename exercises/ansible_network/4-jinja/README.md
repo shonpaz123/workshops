@@ -194,7 +194,7 @@ Save the `config.yaml` file, and run the `ansible rtr1 -m ios_facts -a 'gather_s
 
 Execute the ansible playbook
 
-```ansible-playbook config.yaml```
+```[student1@ansible networking-workshop]$ ansible-playbook config.yaml```
 
 #### Step 8 
 
@@ -203,7 +203,7 @@ does it work? why?
 After you have understood that you should have added the `ios_facts` module to the playbook, rerun the playbook to get the proper result: 
 
 ```bash 
-ansible-playbook config.yml 
+[student1@ansible networking-workshop]$ ansible-playbook config.yml 
 
 PLAY [configure network devices] *************************************************************************************************************************************************************
 
@@ -273,7 +273,7 @@ Add the following section into our `configure device with config` task in the `c
 
 #### Step 10 
 
-``` ansible-playbook config.yaml``` 
+```[student1@ansible networking-workshop]$ ansible-playbook config.yaml``` 
 
 Have the handler been executed? why? 
 
@@ -296,7 +296,7 @@ Execute the playbook and verify that the handler has been executed:
 
 ```bash 
 
-ansible-playbook config.yaml -v 
+[student1@ansible networking-workshop]$ ansible-playbook config.yaml -v 
 
 .
 .
@@ -319,7 +319,7 @@ ok: [rtr1] => changed=false
   stdout_lines: <omitted>
 ```
 
-## Step 12 
+#### Step 12 
 
 Login to the router and verify the configuration has indeed changed: 
 
