@@ -162,8 +162,9 @@ Verify that the configuration has changed in our routers.
 
 # Takeaways
 
-- The [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html) command will allow you access to documentation without an internet connection.  This documentation also matches the version of Ansible on the control node.
-- The [ios_facts module](https://docs.ansible.com/ansible/latest/modules/ios_config_module.html) gathers structured data specific for Cisco IOS.  There are relevant modules for each network platform.  For example there is a junos_facts for Juniper Junos, and a eos_facts for Arista EOS.
+-  We can use [ansible roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) to  package out playbooks into one single entity, giving us the ability of developing playbooks for each role. 
+- We can use [ansible galaxy](https://galaxy.ansible.com/). to create out own empty roles, and also use existing roles located in the `ansible-galaxy` repository. 
+- We can use [ansible lint](https://docs.ansible.com/ansible-lint/) to crawl through an existing role to do some testing. 
 
 # Solution
 
