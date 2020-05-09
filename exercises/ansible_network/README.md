@@ -11,7 +11,7 @@ Want the Presentation Deck?  Its right here:
 - [Exercise 1 - Exploring the lab environment](./1-explore/)
 - [Exercise 2 - Execute your first network automation playbook](./2-first-playbook/)
 - [Exercise 3 - Use Ansible facts on network devices](./3-facts/)
-- [Exercise 4 - Network Configuration with Jinja Templates, Conditionals, Loops and Handlers](./4-jinja/)
+- [Exercise 4 - Network Configuration with Jinja Templates, Conditionals, Loops and Handlers](./4-jinja-loops-handlers/)
 - [Exercise 5: Ansible Roles, Ansible lint](./5-roles-lint/)
 
 ## Network Diagram
