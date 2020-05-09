@@ -195,7 +195,7 @@ Congratulations! you have created your first tested ansible role!
 
 # Solution
 
-The finished Ansible Playbook is provided here for an answer key: [facts.yml](facts.yml).
+The finished Ansible Playbook is provided here for an answer key: [netowrk-role](netowrk-role/).
 
 ---
 
