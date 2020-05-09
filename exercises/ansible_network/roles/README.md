@@ -18,6 +18,7 @@ This exercise will cover:
 - Building an Ansible Playbook from scratch.
 - Using [ansible roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html).
 - Using the [ansible galaxy](https://galaxy.ansible.com/).
+- Using [ansible lint](https://docs.ansible.com/ansible-lint/).
 
 # Guide
 
@@ -159,6 +160,32 @@ ok: [rtr2]
 #### Step 8 
 
 Verify that the configuration has changed in our routers.
+
+## Bonus 
+
+#### Step 9 
+
+Install `ansible-lint` to test your code: 
+
+```bash 
+pip install -y ansible-lint 
+```
+
+#### Step 10 
+
+Chage directory to your home folder and lint our created `network-role` to verify it's valid: 
+
+```bash 
+cd ~/network-role && ansible-lint site.yml
+```
+
+* **ansible-lint** will crawl through our role with a givan `site.yml` file, it will collect the role's name and will look for it in the directory. 
+
+#### Step 11
+
+Fix the syntax problems your'e having **by yourself**
+
+Congratulations! you have created your first tested ansible role!
 
 # Takeaways
 
