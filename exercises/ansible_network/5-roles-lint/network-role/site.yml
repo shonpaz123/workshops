@@ -1,0 +1,5 @@
+---
+- hosts: rtr1,rtr2
+  gather_facts: false
+  roles:
+  - network-role

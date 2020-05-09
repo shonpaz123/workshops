@@ -1,0 +1,5 @@
+nodes:
+  rtr1:
+    Loopback100: "192.168.100.1"
+  rtr2:
+    Loopback100: "192.168.100.2"

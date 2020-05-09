@@ -1,0 +1,16 @@
+---
+# tasks file for network-role
+- name: gather router facts
+  ios_facts:
+
+- name: display network interfraces
+  debug:
+    msg: "MAC for interface {{ item.key }} is {{ item.value['macaddress'] }} for host {{ ansible_net_hostname }}"
+  with_dict: "{{ ansible_net_interfaces }}"
+
+- name: configure device with config
+  cli_config:
+    config: "{{ lookup('template', 'template.j2') }}"
+  when: ansible_net_iostype == "IOS-XE"
+  notify:
+  - write ios device
