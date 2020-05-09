@@ -27,7 +27,7 @@ This exercise will cover:
 Create a directory that will contain our role: 
 
 ```bash 
-mkdir -p ~/network-role && cd ~/network-role
+[student1@ansible networking-workshop]$ mkdir -p ~/network-role && cd ~/network-role
 ```
 
 #### Step 2 
@@ -35,7 +35,7 @@ mkdir -p ~/network-role && cd ~/network-role
 Create a the role using the ansible-galaxy command: 
 
 ```bash 
-ansible-galaxy init network-role 
+[student1@ansible networking-workshop]$ ansible-galaxy init network-role 
 - Role network-role was created successfully
 ```
 
@@ -44,7 +44,7 @@ ansible-galaxy init network-role
 Use `tree` command to see the directory structure of oue role: 
 
 ```
-tree network-role/
+[student1@ansible networking-workshop]$ tree network-role/
 network-role/
 ├── defaults
 │   └── main.yml
@@ -112,7 +112,7 @@ Copy the following content into `network-role/handlers/main.yml`:
 Copy the `group_vars` directory into our working directory: 
 
 ```bash 
-cp -r ~/networking-workshop/group_vars .
+[student1@ansible networking-workshop]$ cp -r ~/networking-workshop/group_vars .
 ```
 
 #### Step 4 
@@ -144,7 +144,7 @@ change the `group_vars/all.yaml` configuration, and verify the handler is being 
 Execute the ansible playbook:
 
 ```bash 
-ansible-plabook site.yml 
+[student1@ansible networking-workshop]$ ansible-plabook site.yml 
 .
 .
 .
@@ -168,7 +168,7 @@ Verify that the configuration has changed in our routers.
 Install `ansible-lint` to test your code: 
 
 ```bash 
-pip install -y ansible-lint 
+[student1@ansible networking-workshop]$ pip install -y ansible-lint 
 ```
 
 #### Step 10 
@@ -176,7 +176,7 @@ pip install -y ansible-lint
 Chage directory to your home folder and lint our created `network-role` to verify it's valid: 
 
 ```bash 
-cd ~/network-role && ansible-lint site.yml
+[student1@ansible networking-workshop]$ cd ~/network-role && ansible-lint site.yml
 ```
 
 * **ansible-lint** will crawl through our role with a givan `site.yml` file, it will collect the role's name and will look for it in the directory. 
