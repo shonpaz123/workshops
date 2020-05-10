@@ -37,10 +37,10 @@ This will not require a username or password.
 Navigate to the `network-workshop` directory on the Ansible control node.  The word `ansible` indicates the hostname, and that you are on the correct host.
 
 ```
-[student1@ansible ~]$ cd ~/networking-workshop/
-[student1@ansible networking-workshop]$
-[student1@ansible networking-workshop]$ pwd
-/home/student1/networking-workshop
+[student1@ansible ~]$ cd ~/network-workshop/
+[student1@ansible network-workshop]$
+[student1@ansible network-workshop]$ pwd
+/home/student1/network-workshop
 ```
  - `~` - the tilde in this context is a shortcut for `/home/student1`
  - `cd` - Linux command to change directory
