@@ -4,7 +4,4 @@ nodes:
     Loopback100: "192.168.100.1"
   rtr2:
     Loopback100: "192.168.100.2"
-  rtr3:
-    Loopback100: "192.168.100.3"
-  rtr4:
-    Loopback100: "192.168.100.4"
+ 
