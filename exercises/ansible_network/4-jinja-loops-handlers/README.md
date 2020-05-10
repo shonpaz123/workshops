@@ -29,13 +29,13 @@ rtr2  | 192.168.100.2/32 |
 Variable information can be stored in host_vars and group_vars.  For this exercise create a folder named `group_vars`:
 
 ```bash
-[student1@ansible networking-workshop]$ mkdir -p ~/networking-workshop/group_vars
+[student1@ansible network-workshop]$ mkdir -p ~/networking-workshop/group_vars
 ```
 
 Now create a file in this directory name `all.yml` using your text editor of choice.  Both vim and nano are installed on the control node.
 
 ```
-[student1@ansible networking-workshop]$ nano group_vars/all.yml
+[student1@ansible network-workshop]$ nano group_vars/all.yml
 ```
 
 The interface and IP address information above must be stored as variables so that the Ansible playbook can use it. Start by making a simple YAML dictionary that stores the table listed above. Use a top level variable (e.g. `nodes`) so that a lookup can be performed based on the `inventory_hostname`:
@@ -57,7 +57,7 @@ Copy the YAML dictionary we created above into the group_vars/all.yml file and s
 Create a new template file named `template.j2`:
 
 ```
-[student1@ansible networking-workshop]$ nano template.j2
+[student1@ansible network-workshop]$ nano template.j2
 ```
 
 Copy the following into the template.j2 file:
@@ -117,7 +117,7 @@ Finally:
 Create the Ansible Playbook config.yml:
 
 ```bash
-[student1@ansible networking-workshop]$ nano config.yml
+[student1@ansible network-workshop]$ nano config.yml
 ```
 
 Copy the following Ansible Playbook to the config.yml file:
@@ -145,7 +145,7 @@ Copy the following Ansible Playbook to the config.yml file:
 Execute the Ansible Playbook:
 
 ```bash
-[student1@ansible networking-workshop]$ ansible-playbook config.yml
+[student1@ansible network-workshop]$ ansible-playbook config.yml
 ```
 
 The output should look as follows.
@@ -169,7 +169,7 @@ rtr2                       : ok=1    changed=1    unreachable=0    failed=0    s
 Use the command `show ip int br` to verify the IP addresses have been confirmed on the network devices.
 
 ```
-[student1@ansible networking-workshop]$ ssh rtr1
+[student1@ansible network-workshop]$ ssh rtr1
 
 rtr1#show ip int br | include Loopback100
 Loopback100            192.168.100.1   YES manual up                    up
@@ -194,7 +194,7 @@ Save the `config.yaml` file, and run the `ansible rtr1 -m ios_facts -a 'gather_s
 
 Execute the ansible playbook
 
-```[student1@ansible networking-workshop]$ ansible-playbook config.yaml```
+```[student1@ansible network-workshop]$ ansible-playbook config.yaml```
 
 #### Step 8 
 
@@ -274,7 +274,7 @@ Add the following section into our `configure device with config` task in the `c
 #### Step 10 
 
 ```bash 
-[student1@ansible networking-workshop]$ ansible-playbook config.yaml
+[student1@ansible network-workshop]$ ansible-playbook config.yaml
 ``` 
 
 Have the handler been executed? why? 
@@ -298,7 +298,7 @@ Execute the playbook and verify that the handler has been executed:
 
 ```bash 
 
-[student1@ansible networking-workshop]$ ansible-playbook config.yaml -v 
+[student1@ansible network-workshop]$ ansible-playbook config.yaml -v 
 
 .
 .
@@ -326,7 +326,7 @@ ok: [rtr1] => changed=false
 Login to the router and verify the configuration has indeed changed: 
 
 ```
-[student1@ansible networking-workshop]$ ssh rtr1
+[student1@ansible network-workshop]$ ssh rtr1
 
 rtr1#show ip int br | include Loopback100
 Loopback100            192.168.100.2   YES manual up                    up
