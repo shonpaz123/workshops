@@ -25,15 +25,15 @@ Navigate to the `networking-workshop` directory if you are not already there.
 
 ```bash
 [student1@ansible ~]$ cd ~/networking-workshop/
-[student1@ansible networking-workshop]$
-[student1@ansible networking-workshop]$ pwd
-/home/student1/networking-workshop
+[student1@ansible network-workshop]$
+[student1@ansible network-workshop]$ pwd
+/home/student1/network-workshop
 ```
 
 Examine the provided Ansible Playbook named `playbook.yml`.  Feel free to use your text editor of choice to open the file.  The sample below will use the Linux `cat` command.
 
 ```bash
-[student1@ansible networking-workshop]$ cat playbook.yml
+[student1@ansible network-workshop]$ cat playbook.yml
 ---
 - name: snmp ro/rw string configuration
   hosts: cisco
@@ -63,7 +63,7 @@ snmp-server community ansible-private RW
 Run the playbook using the `ansible-playbook` command:
 
 ```bash
-[student1@ansible networking-workshop]$ ansible-playbook playbook.yml
+[student1@ansible network-workshop]$ ansible-playbook playbook.yml
 
 PLAY [snmp ro/rw string configuration] *****************************************
 
@@ -96,7 +96,7 @@ The `ios_config` module is idempotent. This means, a configuration change is pus
 To validate the concept of idempotency, re-run the playbook:
 
 ```bash
-[student1@ansible networking-workshop]$  ansible-playbook playbook.yml
+[student1@ansible network-workshop]$  ansible-playbook playbook.yml
 
 PLAY [snmp ro/rw string configuration] **************************************************************************************
 
@@ -125,7 +125,7 @@ snmp-server community ansible-test RO
 Use the text editor of your choice to open the `playbook.yml` file to add the command:
 
 ```bash
-[student1@ansible networking-workshop]$ nano playbook.yml
+[student1@ansible network-workshop]$ nano playbook.yml
 ```
 
 The Ansible Playbook will now look like this:
@@ -152,7 +152,7 @@ This time however, instead of running the playbook to push the change to the dev
 
 
 ```bash
-[student1@ansible networking-workshop]$ ansible-playbook playbook.yml --verbose --check
+[student1@ansible network-workshop]$ ansible-playbook playbook.yml --verbose --check
 Using /home/student1/.ansible.cfg as config file
 
 PLAY [snmp ro/rw string configuration] *****************************************
@@ -178,7 +178,7 @@ The `--check` mode in combination with the `--verbose` flag will display the exa
 Verify that the Ansible Playbook did not apply the `ansible-test` community.  Login to `rtr1` and check the running configuration on the Cisco IOS-XE device.
 
 ```bash
-[student1@ansible networking-workshop]$ ssh rtr1
+[student1@ansible network-workshop]$ ssh rtr1
 
 rtr1#show run | i snmp
 snmp-server community ansible-public RO
@@ -191,7 +191,7 @@ snmp-server community ansible-private RW
 Finally re-run this playbook again without the `-v` or `--check` flag to push the changes.
 
 ```bash
-[student1@ansible networking-workshop]$ ansible-playbook playbook.yml
+[student1@ansible network-workshop]$ ansible-playbook playbook.yml
 
 PLAY [snmp ro/rw string configuration] *****************************************
 
