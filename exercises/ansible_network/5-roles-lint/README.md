@@ -112,7 +112,7 @@ Copy the following content into `network-role/handlers/main.yml`:
 Copy the `group_vars` directory into our working directory: 
 
 ```bash 
-[student1@ansible network-workshop]$ cp -r ~/networking-workshop/group_vars .
+[student1@ansible network-workshop]$ cp -r ~/network-workshop/group_vars .
 ```
 
 #### Step 4 
