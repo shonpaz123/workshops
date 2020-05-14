@@ -173,7 +173,7 @@ Install `ansible-lint` to test your code:
 
 #### Step 10 
 
-Chage directory to your home folder and lint our created `network-role` to verify it's valid: 
+Change directory to your home folder and lint our created `network-role` to verify it's valid: 
 
 ```bash 
 [student1@ansible network-workshop]$ cd ~/network-role && ansible-lint site.yml
