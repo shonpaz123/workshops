@@ -168,7 +168,7 @@ Verify that the configuration has changed in our routers.
 Install `ansible-lint` to test your code: 
 
 ```bash 
-[student1@ansible network-workshop]$ pip install -y ansible-lint 
+[student1@ansible network-workshop]$ pip install ansible-lint 
 ```
 
 #### Step 10 
