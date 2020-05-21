@@ -21,10 +21,10 @@ This exercise will cover
 
 #### Step 1
 
-Navigate to the `networking-workshop` directory if you are not already there.
+Navigate to the `network-workshop` directory if you are not already there.
 
 ```bash
-[student1@ansible ~]$ cd ~/networking-workshop/
+[student1@ansible ~]$ cd ~/network-workshop/
 [student1@ansible network-workshop]$
 [student1@ansible network-workshop]$ pwd
 /home/student1/network-workshop
@@ -207,7 +207,7 @@ rtr1                       : ok=1    changed=1    unreachable=0    failed=0    s
 Verify that the Ansible Playbook applied `ansible-test` community.  Login to `rtr1` and check the running configuration on the Cisco IOS-XE device.
 
 ```bash
-[student1@ansible networking-workshop]$ ssh rtr1
+[student1@ansible network-workshop]$ ssh rtr1
 
 rtr1#sh run | i snmp
 snmp-server community ansible-public RO
