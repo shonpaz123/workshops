@@ -203,7 +203,7 @@ does it work? why?
 After you have understood that you should have added the `ios_facts` module to the playbook, rerun the playbook to get the proper result: 
 
 ```bash 
-[student1@ansible networking-workshop]$ ansible-playbook config.yml 
+[student1@ansible network-workshop]$ ansible-playbook config.yml 
 
 PLAY [configure network devices] *************************************************************************************************************************************************************
 
